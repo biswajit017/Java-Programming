@@ -1,63 +1,64 @@
-public class Main {
+public class Main 
+{
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        int result = calculator.add( -10, 20);
-        System.out.println("The Sum of Two Integer Values is:" + result);
-        
-         double result1 = calculator.add(10.5, 20.3);
-        System.out.println("The Sum of Two Double Values is:" + result1);
-        
-        int result2 = calculator.mul(5, 06);
-        System.out.println("The Multipication of Two Integer Values is:" + result2);
-        
-        double result3 = calculator.mul(5.99, 6.85);
-        System.out.println("The Multipication of Two Double Values is:" + result3);
-        
-    }
+        ShapeCalculator calculator = new ShapeCalculator();
+
+        double area_OF_square = calculator.calculateArea(6);
+        System.out.println("Area OF Sqaure is : " + area_OF_square);
+        double area_OF_rectangle = calculator.calculateArea(6,8);
+        System.out.println("Area OF Rectangle is : " + area_OF_rectangle);
+        double area_OF_circle = calculator.calculateArea(6);
+        System.out.println("Area OF Circle is : " + area_OF_circle);
+        }
+    
 }
 
 /*
-Question 1
- * Write a Java program that defines a MathOperations class with method overloading to perform arithmetic operations. Implement the following methods:
+ * Write a Java program that defines a ShapeCalculator class with method overloading to calculate the area of geometric shapes. Implement the following methods:
 
-Take a class Calculator(BLC Class)
+
+ShapeCalculator - Method overloading
+
 
 take 4 public Method :
-add(int num1, int num2): Returns the sum of two integers.
 
-add(double num1, double num2): Returns the sum of two doubles.
+calculateArea(int sideLength): Returns the area of a square (side * side).
 
-multiply(int num1, int num2): Returns the product of two integers.
+calculateArea(int length, int width): Returns the area of a rectangle (length * width).
 
-multiply(double num1, double num2): Returns the product of two doubles.
+calculateArea(double radius): Returns the area of a circle (p * radius^2).
 
-Take an (ELC Class)In the main method, create an instance of MathOperations and demonstrate the use of each method by performing calculations with different types of arguments (integers and doubles).
+Take an Elc class Main  it having main method and execute the methods.
 
-Test Cases-1 :    Add two doubles
-------------------
-Sample Input: 10.5, 20.3
+Test Cases -1 :
+-------------------
+Valid Case: Calculate area of a circle
+
+Sample Input: radius = 7.0
 
 Expected Output:
 
-Sum of 10.5 and 20.3 (double): 30.8
+Area of circle with radius 7.0: 153.93804
 
 
 Test Cases -2 :
-------------------
-Multiply two integers
+-------------------
 
-Sample Input: 10, 20
+Invalid Case: Negative side length for square
 
-Expected Output:
-Product of 10 and 20 (int): 200
-
-Test Case-3 :
-----------------
-Add with negative integers
-
-Sample Input: -10, 20
-
+Sample Input: sideLength = -5
 Expected Output:
 
-Sum of -10 and 20 (int): 10
+Error: Side length must be non-negative.
+
+
+Test Cases -3 :
+-------------------
+Invalid Case: Negative length or width for rectangle
+
+Sample Input: length = -5, width = 10
+
+Expected Output:
+
+Error: Length and width must be non-negative.
  */
