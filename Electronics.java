@@ -1,15 +1,19 @@
-package Online_Shopping;
+package naresh_it_Exam.Ecommerce_System;
 
-public class Electronics extends Product {
-    private String brand;
+public class Electronics 
+{
 
-    public Electronics(String name, double price, String brand) {
-        super(name, price);
-        this.brand = brand;
-    }
+	String brand;
 
-    public void displayInfo() {
-        super.displayInfo();
-        System.out.println("Brand: " + brand);
-    }
+	public Electronics(String brand) 
+	{
+		super();
+		this.brand = brand;
+	}
+	
+	public void showBrand()
+	{
+		System.out.println("The Electronics Product is by brand : " + brand);
+	}
+	
 }

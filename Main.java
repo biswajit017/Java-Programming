@@ -1,42 +1,17 @@
-package naresh_it_Exam.Library_Management;
-
-class Book {
-    String title;
-    String author;
-
-    public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
-    }
-
-    public void displayDetails() {
-        System.out.println("Title of the Book: " + title);
-        System.out.println("Author of this Book: " + author);
-    }
-}
-
-class Library {
-    String name;
-    Book book;
-
-    public Library(String name, Book book) {
-        this.name = name;
-        this.book = book;
-    }
-
-    public void LibraryDetails() {
-        System.out.println("The Name of the Library: " + name);
-        System.out.println("Book Details:");
-        book.displayDetails(); 
-    }
-}
+package naresh_it_Exam.Ecommerce_System;
 
 public class Main {
-    public static void main(String[] args) {
-        Book b1 = new Book("The Catcher in the Rye", "J.D. Salinger");
-
-        Library l1 = new Library("Central Library", b1);
-
-        l1.LibraryDetails();
+	
+    public static void main(String[] args)
+    {
+    	Product p1 = new Product("SmartPhone",699.99);
+    	p1.displayDetails();
+    	Electronics e1 = new Electronics("Samsung");
+    	e1.showBrand();
+    	Product p2 = new Product("T-Shirt",29.99);
+    	p2.displayDetails();
+    	Clothing c1 = new Clothing("Medium");
+    	c1.showSize();
     }
+
 }

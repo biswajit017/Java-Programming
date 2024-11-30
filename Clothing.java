@@ -1,17 +1,18 @@
+package naresh_it_Exam.Ecommerce_System;
 
-package Online_Shopping;
+public class Clothing 
+{
+	
+	String size;
 
-public class Clothing extends Product {
-    private String size;
+	public Clothing(String size) {
+		super();
+		this.size = size;
+	}
+	
+	public void showSize()
+	{
+		System.out.println("The Size of this clothing item is : " + size);
+	}
 
-    public Clothing(String name, double price, String size) {
-        super(name, price);
-        this.size = size;
-    }
-
-    
-    public void displayInfo() {
-        super.displayInfo();
-        System.out.println("Size: " + size);
-    }
 }
