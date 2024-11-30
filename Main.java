@@ -1,33 +1,42 @@
-package naresh_it_Exam.Chaning_Owner;
+package naresh_it_Exam.Library_Management;
 
-public class Main 
-{
-	public static void main(String[] args)
-	{
+class Book {
+    String title;
+    String author;
 
-		 Owner owner1 = new Owner("John", 30);
-         Product car1 = new Product("Hyundai", "Creta", 2020, owner1);
- 
-         Product productCopy = new Product(car1);
- 
-         System.out.println("Original Car Details:");
-         car1.printDetails();
-         System.out.println();
-         System.out.println("Copied Car Details:");
-         productCopy.printDetails();
- 
-         Owner driver2 = new Owner("Logan", 35);
-         car1.changeDriver(driver2);
- 
-         System.out.println();
-         System.out.println("Original Car Details after Changing Driver:");
-         car1.printDetails();
-         System.out.println();
-         
-		
-		
-		
-		
-	}
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
 
+    public void displayDetails() {
+        System.out.println("Title of the Book: " + title);
+        System.out.println("Author of this Book: " + author);
+    }
+}
+
+class Library {
+    String name;
+    Book book;
+
+    public Library(String name, Book book) {
+        this.name = name;
+        this.book = book;
+    }
+
+    public void LibraryDetails() {
+        System.out.println("The Name of the Library: " + name);
+        System.out.println("Book Details:");
+        book.displayDetails(); 
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Book b1 = new Book("The Catcher in the Rye", "J.D. Salinger");
+
+        Library l1 = new Library("Central Library", b1);
+
+        l1.LibraryDetails();
+    }
 }
